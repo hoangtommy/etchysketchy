@@ -1,17 +1,25 @@
 
+
+
 let container = document.querySelector('#container');
 
 function setGridCol(num) {
 	let autoTimes = '';
 	for (let i = 0; i < num; i++) {
-		autoTimes += 'auto '; // 'auto auto '
+		autoTimes += ' auto'; // 'auto auto '
 	}
 	return autoTimes;
 }
 
-function makeBoxes(num) {
-	num = num(); //this is a callback to the askUser function
-	container.setAttribute('style', `grid-template-columns: ${setGridCol(num)};`);
+function askUser () {
+	let number = prompt('how many squares per side would you like?');
+	return number;
+}
+
+function makeBoxes() {
+	let num = askUser();
+	// num = num(); //this is a callback to the askUser function
+	container.setAttribute('style', `grid-template-columns:${setGridCol(num)};`);
 	for (let i = 0; i < num**2; i++) {
 		let box = document.createElement('div');
 		box.classList.add('box');
@@ -19,9 +27,19 @@ function makeBoxes(num) {
 	}
 }
 
-function askUser () {
-	let number = prompt('how many rows would you like?');
-	return number;
+function colorBoxes() {
+	let boxes = document.querySelectorAll('.box');
+	boxes.forEach((box) => {
+		box.addEventListener('mouseover', () => {
+			box.classList.add('colorBox');
+		});
+	});
 }
 
-makeBoxes(askUser);
+let resetBtn = document.querySelector('#reset');
+resetBtn.addEventListener('click', reset);
+function reset() {
+	container.innerHTML = '';
+	makeBoxes();
+	colorBoxes();
+}
