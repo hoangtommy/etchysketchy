@@ -19,7 +19,7 @@ function askUser () {
 function makeBoxes() {
 	let num = askUser();
 	// num = num(); //this is a callback to the askUser function
-	container.setAttribute('style', `grid-template-columns:${setGridCol(num)};`);
+	container.setAttribute('style', `grid-template-columns: repeat(${num}, auto);`);
 	for (let i = 0; i < num**2; i++) {
 		let box = document.createElement('div');
 		box.classList.add('box');
@@ -31,10 +31,16 @@ function colorBoxes() {
 	let boxes = document.querySelectorAll('.box');
 	boxes.forEach((box) => {
 		box.addEventListener('mouseover', () => {
-			box.classList.add('colorBox');
+			box.classList.add('color1');	
+		if (box.getAttribute('class') == 'box color1') {
+			box.addEventListener('mouseover', () => {
+				box.setAttribute('class', 'color2');
+			});
+		}
 		});
 	});
-}
+
+};
 
 let resetBtn = document.querySelector('#reset');
 resetBtn.addEventListener('click', reset);
