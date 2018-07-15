@@ -1,6 +1,3 @@
-
-
-
 let container = document.querySelector('#container');
 
 function setGridCol(num) {
@@ -19,7 +16,7 @@ function askUser () {
 function makeBoxes() {
 	let num = askUser();
 	// num = num(); //this is a callback to the askUser function
-	container.setAttribute('style', `grid-template-columns: repeat(${num}, auto);`);
+	container.setAttribute('style', `grid-template-columns: repeat(${num}, 1fr); grid-template-rows: repeat(${num}, 1fr);`);
 	for (let i = 0; i < num**2; i++) {
 		let box = document.createElement('div');
 		box.classList.add('box');
@@ -32,14 +29,13 @@ function colorBoxes() {
 	boxes.forEach((box) => {
 		box.addEventListener('mouseover', () => {
 			box.classList.add('color1');	
-		if (box.getAttribute('class').includes('color1')) {
-			box.addEventListener('mouseover', () => {
-				box.classList.add('color2');
-			});
-		}
+			if (box.getAttribute('class').includes('color1')) {
+				box.addEventListener('mouseover', () => {
+					box.classList.add('color2');
+				});
+			}
 		});
 	});
-
 };
 
 let resetBtn = document.querySelector('#reset');

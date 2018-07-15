@@ -1,20 +1,14 @@
 #container {
+	width: 20em;
+	height: 20em;
 	display: grid;
-	/*max-width: 50%;
-	max-height: 50%;
-	*/object-fit: contain;
-	/*background-image: url('https://vignette.wikia.nocookie.net/simpsons/images/1/1b/The_simpsons_tv.png/revision/latest/scale-to-width-down/640?cb=20090831145451');*/
+	margin: auto;
+	border: 2px black dotted;
 }
 
-/*#tv {
-	width: 400px;
-	height: 400px;
-	
-}*/
-
 .box {
-	padding: 5px;
 	border: 1px solid black;
+	/*padding: 20px;*/
 }
 
 .color1 {
@@ -25,6 +19,6 @@
 	background-color: grey;
 }
 
-.secondColor {
-	background-color: grey;
+.color3 {
+	background-color: black;
 }
