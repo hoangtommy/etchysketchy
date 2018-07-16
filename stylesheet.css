@@ -1,4 +1,11 @@
+@font-face {
+	font-family: roadrage;
+	src: url('Road_Rage.otf');
+}
 
+h1 {
+	font-family: roadrage;
+}
 
 #background {
 	width: 70em;
