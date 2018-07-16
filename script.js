@@ -1,13 +1,5 @@
 let container = document.querySelector('#container');
 
-function setGridCol(num) {
-	let autoTimes = '';
-	for (let i = 0; i < num; i++) {
-		autoTimes += ' auto'; // 'auto auto '
-	}
-	return autoTimes;
-}
-
 function askUser () {
 	let number = prompt('how many squares per side would you like?');
 	return number;
@@ -15,7 +7,6 @@ function askUser () {
 
 function makeBoxes() {
 	let num = askUser();
-	// num = num(); //this is a callback to the askUser function
 	container.setAttribute('style', `grid-template-columns: repeat(${num}, 1fr); grid-template-rows: repeat(${num}, 1fr);`);
 	for (let i = 0; i < num**2; i++) {
 		let box = document.createElement('div');
@@ -35,7 +26,7 @@ function colorBoxes() {
 					box.classList.add('color2');
 				});
 			}
-			if (box.getAttribute('class').includes('color2')) {
+			if (box.getAttribute('class').includes('color2')) { //bug, requires two mouseovers to add class color3
 				box.addEventListener('mouseover', () => {
 					box.classList.add('color3');
 				});
