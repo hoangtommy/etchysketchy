@@ -1,10 +1,23 @@
+
+
+#background {
+	width: 70em;
+	height: 70em;
+	background-image: url('https://vignette.wikia.nocookie.net/simpsons/images/1/1b/The_simpsons_tv.png/revision/latest/scale-to-width-down/640?cb=20090831145451');
+	background-repeat: no-repeat;
+	position: absolute;
+}
+
 #container {
-	width: 30em;
-	height: 30em;
+	width: 25em;
+	height: 18em;
 	display: grid;
 	margin: auto;
-	border: 2px black dotted;
+	border: 2px white solid;
 	background-color: white;
+	position: absolute;
+	top: 85px;
+	left: 80px;
 }
 
 button {
@@ -13,22 +26,22 @@ button {
 }
 
 .box {
-	 border: 1px solid black;
+	 /*border: 1px solid black;*/
 	/*padding: 20px;*/
 }
 
 .color1 {
-	background-color: green;
+	background-color: #C45782;
 }
 
 .color2 {
-	background-color: #b3b6bc;
+	background-color: #FBDB20;
 }
 
 .color3 {
-	background-color: purple;
+	background-color: #3163A0;
 }
 
 .color4 {
-	background-color: red;
+	background-color: #323995;
 }
