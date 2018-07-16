@@ -1,13 +1,19 @@
 #container {
-	width: 20em;
-	height: 20em;
+	width: 30em;
+	height: 30em;
 	display: grid;
 	margin: auto;
 	border: 2px black dotted;
+	background-color: white;
+}
+
+button {
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .box {
-	border: 1px solid black;
+	 border: 1px solid black;
 	/*padding: 20px;*/
 }
 
@@ -16,9 +22,13 @@
 }
 
 .color2 {
-	background-color: grey;
+	background-color: #b3b6bc;
 }
 
 .color3 {
-	background-color: black;
+	background-color: purple;
+}
+
+.color4 {
+	background-color: red;
 }

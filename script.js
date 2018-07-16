@@ -29,10 +29,19 @@ function colorBoxes() {
 	boxes.forEach((box) => {
 		box.addEventListener('mouseover', () => {
 			box.classList.add('color1');	
+			
 			if (box.getAttribute('class').includes('color1')) {
 				box.addEventListener('mouseover', () => {
 					box.classList.add('color2');
 				});
+			}
+			if (box.getAttribute('class').includes('color2')) {
+				box.addEventListener('mouseover', () => {
+					box.classList.add('color3');
+				});
+			}
+			if (box.getAttribute('class').includes('color3')) {
+				box.classList.add('color4');
 			}
 		});
 	});
@@ -45,3 +54,5 @@ function reset() {
 	makeBoxes();
 	colorBoxes();
 }
+
+reset();
