@@ -5,8 +5,8 @@ function askUser () {
 	return number;
 }
 
-function makeBoxes() {
-	let num = askUser();
+function makeBoxes(num) {
+	// let num = askUser();
 	container.setAttribute('style', `grid-template-columns: repeat(${num}, 1fr); grid-template-rows: repeat(${num}, 1fr);`);
 	for (let i = 0; i < num**2; i++) {
 		let box = document.createElement('div');
@@ -42,8 +42,9 @@ let resetBtn = document.querySelector('#reset');
 resetBtn.addEventListener('click', reset);
 function reset() {
 	container.innerHTML = '';
-	makeBoxes();
+	makeBoxes(askUser());
 	colorBoxes();
 }
 
-reset();
+makeBoxes(24);
+colorBoxes();
