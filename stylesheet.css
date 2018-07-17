@@ -7,6 +7,11 @@ h1 {
 	font-family: roadrage;
 }
 
+img {
+	float: right;
+	width: 30em;
+}
+
 #background {
 	width: 70em;
 	height: 70em;
@@ -30,6 +35,12 @@ h1 {
 button {
 	margin-left: auto;
 	margin-right: auto;
+	background-color: #323995;
+	color: white;
+	position: absolute;
+	top: 130px;
+	left: 565px;
+	z-index: 3;
 }
 
 .box {
