@@ -23,15 +23,15 @@ img {
 }
 
 #container {
-	width: 25em;
-	height: 18em;
+	width: 31em;
+	height: 25em;
 	display: grid;
 	margin: auto;
-	border: 2px white solid;
+	border: 0px white solid;
 	background-color: white;
 	position: absolute;
-	top: 85px;
-	left: 80px;
+	top: 37px;
+	left: 32px;
 }
 
 button {
@@ -40,9 +40,12 @@ button {
 	background-color: #323995;
 	color: white;
 	position: absolute;
-	top: 100px;
-	left: 565px;
+	top: 140px;
+	left: 585px;
 	z-index: 3;
+	transform: rotate(-65deg);
+	border: none;
+	font-weight: bold;
 }
 
 .box {
@@ -63,5 +66,5 @@ button {
 }
 
 .color4 {
-	background-color: #323995;
+	background-color: #3A449E;
 }

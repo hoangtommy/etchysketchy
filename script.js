@@ -20,7 +20,6 @@ function colorBoxes() {
 	boxes.forEach((box) => {
 		box.addEventListener('mouseover', () => {
 			box.classList.add('color1');	
-			
 			if (box.getAttribute('class').includes('color1')) {
 				box.addEventListener('mouseover', () => {
 					box.classList.add('color2');
@@ -36,6 +35,7 @@ function colorBoxes() {
 			}
 		});
 	});
+
 };
 
 let resetBtn = document.querySelector('#reset');
