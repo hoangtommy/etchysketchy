@@ -5,6 +5,8 @@
 
 h1 {
 	font-family: roadrage;
+	margin: auto;
+	width: 80%;
 }
 
 img {
@@ -38,7 +40,7 @@ button {
 	background-color: #323995;
 	color: white;
 	position: absolute;
-	top: 130px;
+	top: 100px;
 	left: 565px;
 	z-index: 3;
 }
