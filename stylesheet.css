@@ -49,22 +49,6 @@ button {
 }
 
 .box {
-	 /*border: 1px solid black;*/
-	/*padding: 20px;*/
-}
-
-.color1 {
-	background-color: #C45782;
-}
-
-.color2 {
-	background-color: #FBDB20;
-}
-
-.color3 {
-	background-color: #3163A0;
-}
-
-.color4 {
-	background-color: #3A449E;
+	background-color: black;
+	opacity: .1; 
 }
