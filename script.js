@@ -1,4 +1,4 @@
-let container = document.querySelector('#container');
+const container = document.querySelector('#container');
 
 function askUser () {
 	let number = prompt('how many squares per side would you like?');
@@ -19,11 +19,11 @@ function makeBoxes(num) {
 
 function makeDarker(target) {
 	//need to convert to number otherwise addition of string (target.style.opacity) with number gets hairy
-	let currentOpacity = Number(target.style.opacity); 
+	let currentOpacity = Number(target.style.opacity);
 	let opacIncrement = .2;
 	if (currentOpacity < 1) {
 		currentOpacity += opacIncrement;
-	} 
+	}
 	target.style.opacity = currentOpacity;
 }
 
